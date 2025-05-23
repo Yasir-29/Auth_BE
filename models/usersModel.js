@@ -7,16 +7,13 @@ const userSchema = mongoose.Schema({
         required: true,
         unique: true,
         minlength: 5,
-        maxlength: 15,
+        maxlength: 30,
         lowercase: true,
         trim: true,
     },
     password: {
         type: String,
         required: true,
-        minlength: 6,
-        maxlength: 20,
-        trim: false,
         select: false,
     },
     verified: {
@@ -30,7 +27,7 @@ const userSchema = mongoose.Schema({
         select: false,
     },
     verificationCodevalidation: {
-        type: number,
+        type: Number,
         select: false,
     },
     forgotPasswordCode: {
@@ -39,7 +36,7 @@ const userSchema = mongoose.Schema({
         select: false,
     },
     forgotPasswordCodevalidation: {
-        type: number,
+        type: Number,
         select: false,
     },
 
@@ -47,4 +44,4 @@ const userSchema = mongoose.Schema({
     timestamps:true
 })
 
-module.exports=mongoose.Model('User', userSchema);
+export default mongoose.model("User", userSchema);
