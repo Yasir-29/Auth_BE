@@ -5,6 +5,7 @@ import helmet from 'helmet';
 import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
 import authRouter from './routers/authRouter.js';
+import authController from './controllers/authController.js';
 
 
 
